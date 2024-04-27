@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
-}
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-general {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.container-carousel {
+  width: 80%;
 }
+main .col {
+  max-width: 295px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @media screen and (min-width: 1200px) {
+    max-width: 345px;
   }
-  to {
-    transform: rotate(360deg);
+  @media screen and (min-width: 1400px) {
+    max-width: 210px;
+  }
+  @media screen and (min-width: 1700px) {
+    max-width: 260px;
+  }
+  @media screen and (min-width: 1900px) {
+    max-width: 295px;
+  }
+}
+main .row {
+  @media screen and (min-width: 768px) {
+    translate: -10px;
+  }
+  @media screen and (min-width: 992px) {
+    translate: -12px;
+  }
+  @media screen and (min-width: 1200px) {
+    translate: -10px;
+  }
+}
+img {
+  max-width: 295px;
+  object-fit: cover;
+  object-position: bottom;
+  max-height: 166px;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+  @media screen and (min-width: 1200px) {
+    max-width: 365px;
+  }
+  @media screen and (min-width: 1400px) {
+    max-width: 210px;
+  }
+  @media screen and (min-width: 1700px) {
+    max-width: 260px;
+  }
+  @media screen and (min-width: 1900px) {
+    max-width: 295px;
+  }
+}
+
+footer i {
+  transform: scale(2);
+  cursor: pointer;
+  transition: all, 500ms;
+}
+footer i:hover {
+  transform: scale(2.5);
+}
+footer .row {
+  p {
+    cursor: pointer;
   }
 }
