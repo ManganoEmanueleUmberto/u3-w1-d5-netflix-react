@@ -8,7 +8,7 @@
 .container-carousel {
   width: 80%;
 }
-main .col {
+main .column {
   max-width: 295px;
 
   @media screen and (min-width: 1200px) {

@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Carousel, Spinner } from "react-bootstrap";
+import { Carousel, Col, Image, Row, Spinner } from "react-bootstrap";
 
 class StarWarsCarouselServer extends Component {
   state = {
@@ -33,38 +33,38 @@ class StarWarsCarouselServer extends Component {
         {this.state.isLoading && <Spinner animation="border" variant="primary" />}
         <Carousel interval={null} indicators={false} className="ms-4">
           <Carousel.Item>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-xxl-6 justify-content-center gap-2">
+            <Row className="justify-content-center gap-2 ">
               {this.state.films &&
                 this.state.films.Search.map((film, i) => {
                   console.log(film);
                   if (i < 6) {
                     return (
-                      <div className="col">
-                        <img src={film.Poster} className="d-block " alt="..." />
-                      </div>
+                      <Col xs={12} sm={6} xxl={2} className="column p-0">
+                        <Image src={film.Poster} className="d-block " />
+                      </Col>
                     );
                   } else {
                     return <></>;
                   }
                 })}
-            </div>
+            </Row>
           </Carousel.Item>
           <Carousel.Item>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-xxl-6 justify-content-evenly gap-2">
+            <Row className="justify-content-evenly gap-2 ">
               {this.state.films &&
                 this.state.films.Search.map((film, i) => {
                   console.log(film);
                   if (i > 5) {
                     return (
-                      <div className="col">
-                        <img src={film.Poster} className="d-block " alt="..." />
-                      </div>
+                      <Col xs={12} sm={6} xxl={2} className="column p-0">
+                        <Image src={film.Poster} className="d-block " />
+                      </Col>
                     );
                   } else {
                     return <></>;
                   }
                 })}
-            </div>
+            </Row>
           </Carousel.Item>
         </Carousel>
       </div>

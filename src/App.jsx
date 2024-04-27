@@ -1,4 +1,5 @@
 import "./App.css";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import Topbar from "./components/Topbar";
 import TvShows from "./components/TvShows";
@@ -9,6 +10,7 @@ import StarWarsCarouselServer from "./components/StarWarsCarouselServer";
 import HarryPotterCarouselServer from "./components/HarryPotterCarouselServer";
 import SpideManCarouselServer from "./components/SpideManCarouselServer";
 import MyFooter from "./components/MyFooter";
+import Profile from "./components/Profile";
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
         <HarryPotterCarouselServer />
         <SpideManCarouselServer />
         <MyFooter />
+        {/* <Profile /> Commentare anche App.css */}
       </main>
     </div>
   );
