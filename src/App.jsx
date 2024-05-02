@@ -11,24 +11,38 @@ import HarryPotterCarouselServer from "./components/HarryPotterCarouselServer";
 import SpideManCarouselServer from "./components/SpideManCarouselServer";
 import MyFooter from "./components/MyFooter";
 import Profile from "./components/Profile";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Topbar />
-      </header>
-      <main className="bg-dark">
-        <TvShows />
-        <TrendingCarousel />
-        <WatchItCarousel />
-        <NewRealeasesCarousel />
-        <StarWarsCarouselServer />
-        <HarryPotterCarouselServer />
-        <SpideManCarouselServer />
-        <MyFooter />
-        {/* <Profile /> Commentare anche App.css */}
-      </main>
+      <BrowserRouter>
+        <header className="App-header">
+          <Topbar />
+        </header>
+
+        <main className="bg-dark">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <TvShows />
+                  <TrendingCarousel />
+                  <WatchItCarousel />
+                  <NewRealeasesCarousel />
+                  <StarWarsCarouselServer />
+                  <HarryPotterCarouselServer />
+                  <SpideManCarouselServer />
+                  <MyFooter />
+                </>
+              }
+            />
+
+            <Route path="/settings" element={<Profile />} />
+          </Routes>
+        </main>
+      </BrowserRouter>
     </div>
   );
 }

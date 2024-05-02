@@ -1,4 +1,5 @@
 import { Container, Dropdown, Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const Topbar = () => {
   return (
@@ -10,10 +11,10 @@ const Topbar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav d-flex">
           <Nav>
-            <Nav.Link href="#">Home</Nav.Link>
-            <Nav.Link href="#" className="active">
-              TV Shows
-            </Nav.Link>
+            <NavLink to="/" className="nav-link">
+              Home
+            </NavLink>
+            <Nav.Link href="#">TV Shows</Nav.Link>
             <Nav.Link href="#">Movies</Nav.Link>
             <Nav.Link href="#">Recently Added</Nav.Link>
             <Nav.Link href="#">My List</Nav.Link>
@@ -27,7 +28,9 @@ const Topbar = () => {
 
                 <Dropdown.Menu>
                   <Dropdown.Item href="#">Profile</Dropdown.Item>
-                  <Dropdown.Item href="#">Settings</Dropdown.Item>
+                  <NavLink to="/settings" className="dropdown-item">
+                    Settings
+                  </NavLink>
                 </Dropdown.Menu>
               </Dropdown>
             </div>
